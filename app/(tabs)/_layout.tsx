@@ -12,7 +12,7 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>["name"];
   color: string;
 }) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={28} style={{ marginBottom: -15 }} {...props} />;
 }
 
 export default function Chats() {
@@ -39,14 +39,15 @@ export default function Chats() {
           </Link>
         ),
         headerTitle: () => (
-          <View style={{ alignItems: "center" }}>
+          <View>
             <Image
-              source={require("../../assets/images/splash.png")}
-              style={{ height: 25, width: 600 }}
+              source={require("../../assets/images/kazboo_logo.png")}
+              style={{ height: 25, width: 150 }}
             />
           </View>
         ),
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarInactiveTintColor: Colors[colorScheme ?? "light"].tabIconDefault,
         headerRight: () => (
           <Link href="/notifications" asChild>
             <Pressable>
