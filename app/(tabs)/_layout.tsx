@@ -1,6 +1,7 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { Feather } from "@expo/vector-icons";
 import { Link, Tabs } from "expo-router";
-import { Pressable, useColorScheme } from "react-native";
+import { Pressable, useColorScheme, Image, View } from "react-native";
 
 import Colors from "../../constants/Colors";
 
@@ -14,13 +15,55 @@ function TabBarIcon(props: {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
-export default function TabLayout() {
+export default function Chats() {
   const colorScheme = useColorScheme();
 
   return (
     <Tabs
       screenOptions={{
+        headerStyle: {
+          backgroundColor: "#2BC4A9",
+        },
+        headerLeft: () => (
+          <Link href="/menu" asChild>
+            <Pressable>
+              {({ pressed }) => (
+                <Feather
+                  name="menu"
+                  size={25}
+                  color={Colors[colorScheme ?? "light"].text}
+                  style={{ marginLeft: 20, opacity: pressed ? 0.5 : 1 }}
+                />
+              )}
+            </Pressable>
+          </Link>
+        ),
+        headerTitle: () => (
+          <View style={{ alignItems: "center" }}>
+            <Image
+              source={require("../../assets/images/splash.png")}
+              style={{ height: 25, width: 600 }}
+            />
+          </View>
+        ),
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        headerRight: () => (
+          <Link href="/notifications" asChild>
+            <Pressable>
+              {({ pressed }) => (
+                <FontAwesome
+                  name="bell"
+                  size={25}
+                  color={Colors[colorScheme ?? "light"].text}
+                  style={{ marginRight: 20, opacity: pressed ? 0.5 : 1 }}
+                />
+              )}
+            </Pressable>
+          </Link>
+        ),
+        tabBarStyle: {
+          backgroundColor: "#2BC4A9",
+        },
       }}
     >
       <Tabs.Screen
@@ -28,20 +71,6 @@ export default function TabLayout() {
         options={{
           title: "",
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? "light"].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
         }}
       />
       <Tabs.Screen
