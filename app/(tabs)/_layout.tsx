@@ -22,7 +22,7 @@ export default function Chats() {
     <Tabs
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#2BC4A9",
+          backgroundColor: Colors[colorScheme ?? "light"].headerBackground,
         },
         headerLeft: () => (
           <Link href="/menu" asChild>
@@ -39,12 +39,10 @@ export default function Chats() {
           </Link>
         ),
         headerTitle: () => (
-          <View>
-            <Image
-              source={require("../../assets/images/kazboo_logo.png")}
-              style={{ height: 25, width: 150 }}
-            />
-          </View>
+          <Image
+            source={require("../../assets/images/kazboo_logo.png")}
+            style={{ height: 25, width: 150 }}
+          />
         ),
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         tabBarInactiveTintColor: Colors[colorScheme ?? "light"].tabIconDefault,
@@ -63,7 +61,7 @@ export default function Chats() {
           </Link>
         ),
         tabBarStyle: {
-          backgroundColor: "#2BC4A9",
+          backgroundColor: Colors[colorScheme ?? "light"].tabBarBackground,
         },
       }}
     >

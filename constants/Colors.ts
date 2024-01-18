@@ -1,5 +1,6 @@
 const tintColorLight = "#000";
 const tintColorDark = "#fff";
+const turquoiseBackground = "#2BC4A9";
 
 export default {
   light: {
@@ -8,6 +9,8 @@ export default {
     tint: tintColorLight,
     tabIconDefault: "#fff",
     tabIconSelected: tintColorLight,
+    headerBackground: turquoiseBackground,
+    tabBarBackground: turquoiseBackground,
   },
   dark: {
     text: "#fff",
@@ -15,5 +18,7 @@ export default {
     tint: tintColorDark,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorDark,
+    headerBackground: turquoiseBackground,
+    tabBarBackground: turquoiseBackground,
   },
 };
