@@ -1,6 +1,7 @@
 import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
 import { Text, View } from "../../components/Themed";
 import MakeNewPostOptionsSection from "../../components/home/MakeNewPostOptionsArea/MakeNewPostOptionsSection";
+import Feed from "../../components/home/Feed/Feed";
 
 export default function TabOneScreen() {
   return (
@@ -12,7 +13,7 @@ export default function TabOneScreen() {
           }}
         >
           <MakeNewPostOptionsSection />
-          {/* <Feed/> */}
+          <Feed />
           {/* <FriendSuggestionsSection/> */}
         </View>
       </ScrollView>
