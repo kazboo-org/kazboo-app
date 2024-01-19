@@ -1,11 +1,22 @@
-import { StyleSheet } from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
 import { Text, View } from "../../components/Themed";
+import MakeNewPostOptionsSection from "../../components/home/MakeNewPostOptionsArea/MakeNewPostOptionsSection";
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            flex: 1,
+          }}
+        >
+          <MakeNewPostOptionsSection />
+          {/* <Feed/> */}
+          {/* <FriendSuggestionsSection/> */}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

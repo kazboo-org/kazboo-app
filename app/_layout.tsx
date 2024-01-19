@@ -56,6 +56,18 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
+          name="postByTextModal"
+          options={{ presentation: "modal", title: "What's on your mind?" }}
+        />
+        <Stack.Screen
+          name="postByAudioModal"
+          options={{ presentation: "modal", title: "What's on your mind?" }}
+        />
+        <Stack.Screen
+          name="postByPhotoVideoModal"
+          options={{ presentation: "modal", title: "What's on your mind?" }}
+        />
+        <Stack.Screen
           name="modal"
           options={{ presentation: "modal", title: "Notifications" }}
         />
