@@ -71,10 +71,6 @@ function RootLayoutNav() {
           name="modals/searchModal"
           options={{ presentation: "modal", title: "Search" }}
         />
-        <Stack.Screen
-          name="modal"
-          options={{ presentation: "modal", title: "Notifications" }}
-        />
       </Stack>
     </ThemeProvider>
   );
