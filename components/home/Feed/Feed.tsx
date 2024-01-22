@@ -33,7 +33,7 @@ export default function Feed() {
   //   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.feedTitle}>Nyt fra dine venner</Text>
       {posts?.map((post: any) => (
         <Post key={post.id} post={post} />

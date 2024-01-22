@@ -3,13 +3,12 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 20,
-    marginVertical: 20,
     paddingHorizontal: 20,
     paddingVertical: 20,
-    backgroundColor: "#d3dadb",
+    backgroundColor: "white",
     borderRadius: 10,
-    shadowOpacity: 2,
+    shadowOpacity: 0.3,
+    shadowOffset: 0.3,
   },
   headerContainer: { flexDirection: "row" },
   title: {
