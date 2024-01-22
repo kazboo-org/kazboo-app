@@ -56,16 +56,20 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="postByTextModal"
+          name="modals/postByTextModal"
           options={{ presentation: "modal", title: "What's on your mind?" }}
         />
         <Stack.Screen
-          name="postByAudioModal"
+          name="modals/postByAudioModal"
           options={{ presentation: "modal", title: "What's on your mind?" }}
         />
         <Stack.Screen
-          name="postByPhotoVideoModal"
+          name="modals/postByPhotoVideoModal"
           options={{ presentation: "modal", title: "What's on your mind?" }}
+        />
+        <Stack.Screen
+          name="modals/searchModal"
+          options={{ presentation: "modal", title: "Search" }}
         />
         <Stack.Screen
           name="modal"

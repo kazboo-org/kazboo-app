@@ -30,7 +30,7 @@ export default function MakeNewPostOptionsSection() {
       <Text style={styles.postOptionsText}>Hvad vil du gerne poste?</Text>
       <View style={styles.postOptionsContainer}>
         <View>
-          <Link href={"/postByTextModal"} asChild>
+          <Link href={"/modals/postByTextModal"} asChild>
             <PostOption
               name="commenting-o"
               color={Colors.common.iconMainColor}
@@ -38,12 +38,12 @@ export default function MakeNewPostOptionsSection() {
           </Link>
         </View>
         <View>
-          <Link href={"/postByAudioModal"} asChild>
+          <Link href={"/modals/postByAudioModal"} asChild>
             <PostOption name="microphone" color={Colors.common.iconMainColor} />
           </Link>
         </View>
         <View>
-          <Link href={"/postByPhotoVideoModal"} asChild>
+          <Link href={"/modals/postByPhotoVideoModal"} asChild>
             <PostOption name="camera" color={Colors.common.iconMainColor} />
           </Link>
         </View>

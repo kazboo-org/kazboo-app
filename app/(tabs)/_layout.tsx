@@ -91,6 +91,20 @@ export default function TabLayout() {
         options={{
           title: "",
           tabBarIcon: ({ color }) => <TabBarIcon name="safari" color={color} />,
+          headerRight: () => (
+            <Link href="/modals/searchModal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="search"
+                    size={25}
+                    color={Colors[colorScheme ?? "light"].text}
+                    style={{ marginRight: 20, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
       />
     </Tabs>
