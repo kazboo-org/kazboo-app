@@ -4,6 +4,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 import styles from "./MakeNewPostOptionsSection.style";
 import { Link } from "expo-router";
+import Colors from "../../../constants/Colors";
 
 function PostOption(props: {
   name: React.ComponentProps<typeof FontAwesome>["name"];
@@ -30,17 +31,20 @@ export default function MakeNewPostOptionsSection() {
       <View style={styles.postOptionsContainer}>
         <View>
           <Link href={"/postByTextModal"} asChild>
-            <PostOption name="commenting-o" color="orange" />
+            <PostOption
+              name="commenting-o"
+              color={Colors.common.iconMainColor}
+            />
           </Link>
         </View>
         <View>
           <Link href={"/postByAudioModal"} asChild>
-            <PostOption name="microphone" color="orange" />
+            <PostOption name="microphone" color={Colors.common.iconMainColor} />
           </Link>
         </View>
         <View>
           <Link href={"/postByPhotoVideoModal"} asChild>
-            <PostOption name="camera" color="orange" />
+            <PostOption name="camera" color={Colors.common.iconMainColor} />
           </Link>
         </View>
       </View>

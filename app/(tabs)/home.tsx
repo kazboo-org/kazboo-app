@@ -1,5 +1,5 @@
 import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
-import { Text, View } from "../../components/Themed";
+import { View } from "../../components/Themed";
 import MakeNewPostOptionsSection from "../../components/home/MakeNewPostOptionsArea/MakeNewPostOptionsSection";
 import Feed from "../../components/home/Feed/Feed";
 

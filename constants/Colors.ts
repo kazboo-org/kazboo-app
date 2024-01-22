@@ -21,4 +21,5 @@ export default {
     headerBackground: turquoiseBackground,
     tabBarBackground: turquoiseBackground,
   },
+  common: { iconMainColor: "orange" },
 };
