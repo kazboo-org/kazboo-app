@@ -71,6 +71,13 @@ function RootLayoutNav() {
           name="modals/searchModal"
           options={{ presentation: "modal", title: "Search" }}
         />
+        {/* <Stack.Screen
+          name="modals/postOptionsModal"
+          options={{
+            // presentation: "modals/postOptionsModal",
+            title: "Search",
+          }}
+        /> */}
       </Stack>
     </ThemeProvider>
   );

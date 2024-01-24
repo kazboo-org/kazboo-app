@@ -1,28 +1,9 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-
+import PressableIcon from "../../common/UI/PressableIcon/PressableIcon";
 import styles from "./MakeNewPostOptionsSection.style";
 import { Link } from "expo-router";
 import Colors from "../../../constants/Colors";
-
-function PostOption(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return (
-    <Pressable>
-      {({ pressed }) => (
-        <FontAwesome
-          size={50}
-          //   color={Colors[colorScheme ?? "light"].text}
-          style={{ opacity: pressed ? 0.5 : 1 }}
-          {...props}
-        />
-      )}
-    </Pressable>
-  );
-}
 
 export default function MakeNewPostOptionsSection() {
   return (
@@ -31,20 +12,23 @@ export default function MakeNewPostOptionsSection() {
       <View style={styles.postOptionsContainer}>
         <View>
           <Link href={"/modals/postByTextModal"} asChild>
-            <PostOption
+            <PressableIcon
               name="commenting-o"
-              color={Colors.common.iconMainColor}
+              color={Colors.common.orangeColor}
             />
           </Link>
         </View>
         <View>
           <Link href={"/modals/postByAudioModal"} asChild>
-            <PostOption name="microphone" color={Colors.common.iconMainColor} />
+            <PressableIcon
+              name="microphone"
+              color={Colors.common.orangeColor}
+            />
           </Link>
         </View>
         <View>
           <Link href={"/modals/postByPhotoVideoModal"} asChild>
-            <PostOption name="camera" color={Colors.common.iconMainColor} />
+            <PressableIcon name="camera" color={Colors.common.orangeColor} />
           </Link>
         </View>
       </View>
