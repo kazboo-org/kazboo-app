@@ -1,21 +1,14 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  Image,
-  Pressable,
-  Button,
-  Modal,
-  Alert,
-} from "react-native";
+import { View, Text, Image, Pressable } from "react-native";
 import TagList from "./TagsList";
 import styles from "./Post.style";
 import HeartBadge from "../UI/HeartBadge/HeartBadge";
 import { Link } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import CustomModal from "../UI/CustomModal/CustomModal";
 
 export default function Post({ post }: any) {
-  const [showPostOptions, setShowPostOptions] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   // This function sets a heart badge randomly on a user profile photo.
   // Later, the heart badge will be set according to the user data fetched from the database and set in the global state.
@@ -39,7 +32,7 @@ export default function Post({ post }: any) {
             <Text style={styles.postDate}>22. januar 2024</Text>
           </View>
           <Pressable
-            onPress={() => setShowPostOptions(true)}
+            onPress={() => setShowModal(true)}
             style={[styles.button, { marginLeft: "auto" }]}
           >
             {({ pressed }) => (
@@ -56,27 +49,47 @@ export default function Post({ post }: any) {
         <TagList tags={post.tags} />
         <Text>Reactions: {post.reactions}</Text>
       </View>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={showPostOptions}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setShowPostOptions(!showPostOptions);
-        }}
+      <CustomModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalTitle={"Her kan du"}
       >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setShowPostOptions(!showPostOptions)}
-            >
-              <Text style={styles.textStyle}>Hide Modal</Text>
-            </Pressable>
-          </View>
+        <View style={styles.modalOption}>
+          <Pressable onPress={() => setShowModal(!showModal)}>
+            <View style={styles.textContainer}>
+              <Text style={styles.textStyle}>Anbefale til venner</Text>
+            </View>
+          </Pressable>
         </View>
-      </Modal>
+        <View style={styles.modalOption}>
+          <Pressable onPress={() => setShowModal(!showModal)}>
+            <View style={styles.textContainer}>
+              <Text style={styles.textStyle}>Send til en ven</Text>
+            </View>
+          </Pressable>
+        </View>
+        <View style={styles.modalOption}>
+          <Pressable onPress={() => setShowModal(!showModal)}>
+            <View style={styles.textContainer}>
+              <Text style={styles.textStyle}>Besøg profil</Text>
+            </View>
+          </Pressable>
+        </View>
+        <View style={styles.modalOption}>
+          <Pressable onPress={() => setShowModal(!showModal)}>
+            <View style={styles.textContainer}>
+              <Text style={styles.textStyle}>Send besked</Text>
+            </View>
+          </Pressable>
+        </View>
+        <View style={styles.lastChild}>
+          <Pressable onPress={() => setShowModal(!showModal)}>
+            <View style={styles.textContainer}>
+              <Text style={styles.textStyle}>Anmelde indholdet</Text>
+            </View>
+          </Pressable>
+        </View>
+      </CustomModal>
     </>
   );
 }
