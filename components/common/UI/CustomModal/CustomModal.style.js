@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   modalView: {
     backgroundColor: "white",
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
     justifyContent: "center",
-    backgroundColor: Colors.common.orangeColor,
+    backgroundColor: Colors.common.modalHeaderColor,
   },
   headerText: { textAlign: "center", fontWeight: "bold", fontSize: 20 },
   modalContent: {},
