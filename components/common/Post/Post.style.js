@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../../constants/Colors";
 
 const styles = StyleSheet.create({
   container: {
@@ -17,18 +18,32 @@ const styles = StyleSheet.create({
   },
   postDate: { fontWeight: "300" },
   postOptionsButton: { marginLeft: "auto" },
-  textContainer: { marginBottom: 15 },
-  modalOption: {
+  modalHeader: {
+    width: 300,
     height: 60,
-    justifyContent: "flex-end",
+    paddingHorizontal: 35,
+    flexDirection: "row",
+    alignItems: "center",
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    backgroundColor: Colors.common.modalHeaderColor,
+  },
+  headerText: {
+    marginLeft: 20,
+    marginLefttextAlign: "center",
+    fontWeight: "bold",
+    fontSize: 20,
+  },
+  modalOption: {
+    width: 260,
+    height: 60,
+    flexDirection: "row",
+    alignItems: "center",
     borderBottomColor: "black",
     borderBottomWidth: 0.5,
   },
   lastChild: {
-    height: 60,
-    justifyContent: "flex-end",
     borderBottomColor: "transparent",
-    borderBottomWidth: 0,
   },
   button: {
     borderRadius: 20,
@@ -36,6 +51,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   textStyle: {
+    marginLeft: 10,
     textAlign: "center",
     fontSize: 18,
     fontWeight: "400",

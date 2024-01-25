@@ -1,7 +1,5 @@
 import { StyleSheet } from "react-native";
 
-import Colors from "../../../../constants/Colors";
-
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
@@ -22,16 +20,6 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
-  modalHeader: {
-    width: 300,
-    height: 60,
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
-    justifyContent: "center",
-    backgroundColor: Colors.common.modalHeaderColor,
-  },
-  headerText: { textAlign: "center", fontWeight: "bold", fontSize: 20 },
-  modalContent: {},
 });
 
 export default styles;
