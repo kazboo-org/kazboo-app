@@ -21,5 +21,9 @@ export default {
     headerBackground: turquoiseBackground,
     tabBarBackground: turquoiseBackground,
   },
-  common: { orangeColor: "orange", modalHeaderColor: "#F58221" },
+  common: {
+    orangeColor: "orange",
+    modalHeaderColor: "#F58221",
+    modalIconBlackColor: "#000",
+  },
 };
