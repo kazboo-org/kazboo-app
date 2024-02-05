@@ -7,7 +7,7 @@ export default function HeartBadge() {
   return (
     <View style={styles.heartBadgeContainer}>
       <Image
-        source={require("../../../../assets/images/heartBadge.png")}
+        source={require("../../../assets/images/heartBadge.png")}
         style={{
           position: "absolute",
           height: 8,

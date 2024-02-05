@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import React from "react";
-import PressableIcon from "../../common/UI/PressableIcon/PressableIcon";
 import styles from "./MakeNewPostOptionsSection.style";
 import { Link } from "expo-router";
 import Colors from "../../../constants/Colors";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import MessageIcon from "../../../assets/svgComponents/postOptionsSvgComponents/MessageIcon";
 
 export default function MakeNewPostOptionsSection() {
   return (
@@ -12,23 +13,55 @@ export default function MakeNewPostOptionsSection() {
       <View style={styles.postOptionsContainer}>
         <View>
           <Link href={"/modals/postByTextModal"} asChild>
-            <PressableIcon
-              name="commenting-o"
-              color={Colors.common.orangeColor}
-            />
+            <Pressable>
+              {({ pressed }) => (
+                <FontAwesome
+                  size={50}
+                  name="commenting-o"
+                  color={
+                    pressed
+                      ? Colors.common.modalIconPressedColor
+                      : Colors.common.orangeColor
+                  }
+                />
+                // FontAwesome icons need to be exchanged with local svg files
+                // <MessageIcon fill={"orange"} />
+              )}
+            </Pressable>
           </Link>
         </View>
         <View>
           <Link href={"/modals/postByAudioModal"} asChild>
-            <PressableIcon
-              name="microphone"
-              color={Colors.common.orangeColor}
-            />
+            <Pressable>
+              {({ pressed }) => (
+                <FontAwesome
+                  size={50}
+                  name="microphone"
+                  color={
+                    pressed
+                      ? Colors.common.modalIconPressedColor
+                      : Colors.common.orangeColor
+                  }
+                />
+              )}
+            </Pressable>
           </Link>
         </View>
         <View>
           <Link href={"/modals/postByPhotoVideoModal"} asChild>
-            <PressableIcon name="camera" color={Colors.common.orangeColor} />
+            <Pressable>
+              {({ pressed }) => (
+                <FontAwesome
+                  size={50}
+                  name="camera"
+                  color={
+                    pressed
+                      ? Colors.common.modalIconPressedColor
+                      : Colors.common.orangeColor
+                  }
+                />
+              )}
+            </Pressable>
           </Link>
         </View>
       </View>

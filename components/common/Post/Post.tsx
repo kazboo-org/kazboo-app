@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import TagList from "./TagsList";
-import HeartBadge from "../UI/HeartBadge/HeartBadge";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import CustomModal from "../UI/CustomModal/CustomModal";
+import HeartBadge from "../HeartBadge/HeartBadge";
+import CustomModal from "../CustomModal/CustomModal";
 import ThreeDotsIcon from "../../../assets/svgComponents/postModalSvgComponents/ThreeDotsIcon";
 import HeartPlusIcon from "../../../assets/svgComponents/postModalSvgComponents/HeartPlusIcon";
 import PaperFlyIcon from "../../../assets/svgComponents/postModalSvgComponents/PaperFlyIcon";
@@ -43,11 +42,12 @@ export default function Post({ post }: any) {
             style={[styles.button, { marginLeft: "auto" }]}
           >
             {({ pressed }) => (
-              <FontAwesome
-                name="ellipsis-v"
-                size={25}
-                color={"black"}
-                style={{ opacity: pressed ? 0.5 : 1 }}
+              <ThreeDotsIcon
+                fill={
+                  pressed
+                    ? Colors.common.modalIconPressedColor
+                    : Colors.common.modalIconBlackColor
+                }
               />
             )}
           </Pressable>
