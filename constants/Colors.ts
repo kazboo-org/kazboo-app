@@ -25,5 +25,6 @@ export default {
     orangeColor: "orange",
     modalHeaderColor: "#F58221",
     modalIconBlackColor: "#000",
+    modalIconPressedColor: "#ccc",
   },
 };
