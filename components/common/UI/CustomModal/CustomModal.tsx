@@ -1,19 +1,18 @@
-import { View, Text, Modal, Alert, Pressable } from "react-native";
+import { View, Text, Modal, ImageBackground } from "react-native";
 import React from "react";
 import styles from "./CustomModal.style";
+import { BlurView } from "expo-blur";
 
 type CustomModalProps = {
   showModal: boolean;
   setShowModal: (show: boolean) => void;
   children: any;
-  modalTitle: string;
 };
 
 const CustomModal: React.FC<CustomModalProps> = ({
   showModal,
   setShowModal,
   children,
-  modalTitle,
 }) => {
   return (
     <Modal
@@ -24,14 +23,9 @@ const CustomModal: React.FC<CustomModalProps> = ({
         setShowModal(!showModal);
       }}
     >
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>
-          <View style={styles.modalHeader}>
-            <Text style={styles.headerText}>{modalTitle}</Text>
-          </View>
-          <View style={styles.modalContent}>{children}</View>
-        </View>
-      </View>
+      <BlurView intensity={10} style={styles.centeredView}>
+        <View style={styles.modalView}>{children}</View>
+      </BlurView>
     </Modal>
   );
 };

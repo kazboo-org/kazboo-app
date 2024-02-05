@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import TagList from "./TagsList";
-import styles from "./Post.style";
 import HeartBadge from "../UI/HeartBadge/HeartBadge";
-import { Link } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import CustomModal from "../UI/CustomModal/CustomModal";
+import ThreeDotsIcon from "../../../assets/svgComponents/postModalSvgComponents/ThreeDotsIcon";
+import HeartPlusIcon from "../../../assets/svgComponents/postModalSvgComponents/HeartPlusIcon";
+import PaperFlyIcon from "../../../assets/svgComponents/postModalSvgComponents/PaperFlyIcon";
+import UserProfileIcon from "../../../assets/svgComponents/postModalSvgComponents/UserProfileIcon";
+import MailIcon from "../../../assets/svgComponents/postModalSvgComponents/MailIcon";
+import AttentionIcon from "../../../assets/svgComponents/postModalSvgComponents/AttentionIcon";
+
+import styles from "./Post.style";
+import Colors from "../../../constants/Colors";
 
 export default function Post({ post }: any) {
   const [showModal, setShowModal] = useState(false);
@@ -49,42 +56,39 @@ export default function Post({ post }: any) {
         <TagList tags={post.tags} />
         <Text>Reactions: {post.reactions}</Text>
       </View>
-      <CustomModal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        modalTitle={"Her kan du"}
-      >
-        <View style={styles.modalOption}>
+      <CustomModal showModal={showModal} setShowModal={setShowModal}>
+        <View style={styles.modalHeader}>
+          <ThreeDotsIcon fill={Colors.common.modalIconBlackColor} />
+          <Text style={styles.headerText}>Her kan du</Text>
+        </View>
+        <View>
           <Pressable onPress={() => setShowModal(!showModal)}>
-            <View style={styles.textContainer}>
+            <View style={styles.modalOption}>
+              <HeartPlusIcon fill={Colors.common.modalIconBlackColor} />
               <Text style={styles.textStyle}>Anbefale til venner</Text>
             </View>
           </Pressable>
-        </View>
-        <View style={styles.modalOption}>
           <Pressable onPress={() => setShowModal(!showModal)}>
-            <View style={styles.textContainer}>
+            <View style={styles.modalOption}>
+              <PaperFlyIcon fill={Colors.common.modalIconBlackColor} />
               <Text style={styles.textStyle}>Send til en ven</Text>
             </View>
           </Pressable>
-        </View>
-        <View style={styles.modalOption}>
           <Pressable onPress={() => setShowModal(!showModal)}>
-            <View style={styles.textContainer}>
+            <View style={styles.modalOption}>
+              <UserProfileIcon fill={Colors.common.modalIconBlackColor} />
               <Text style={styles.textStyle}>Besøg profil</Text>
             </View>
           </Pressable>
-        </View>
-        <View style={styles.modalOption}>
           <Pressable onPress={() => setShowModal(!showModal)}>
-            <View style={styles.textContainer}>
+            <View style={styles.modalOption}>
+              <MailIcon fill={Colors.common.modalIconBlackColor} />
               <Text style={styles.textStyle}>Send besked</Text>
             </View>
           </Pressable>
-        </View>
-        <View style={styles.lastChild}>
           <Pressable onPress={() => setShowModal(!showModal)}>
-            <View style={styles.textContainer}>
+            <View style={[styles.modalOption, styles.lastChild]}>
+              <AttentionIcon fill={Colors.common.modalIconBlackColor} />
               <Text style={styles.textStyle}>Anmelde indholdet</Text>
             </View>
           </Pressable>
