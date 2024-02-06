@@ -71,6 +71,13 @@ function RootLayoutNav() {
           name="modals/searchModal"
           options={{ presentation: "modal", title: "Search" }}
         />
+        <Stack.Screen
+          name="userProfile"
+          options={{
+            // headerShown: false,
+            title: "User Profile Overview",
+          }}
+        />
         {/* <Stack.Screen
           name="modals/postOptionsModal"
           options={{
