@@ -13,14 +13,13 @@ import AttentionIcon from "../../../assets/svgComponents/postModalSvgComponents/
 import styles from "./Post.style";
 import Colors from "../../../constants/Colors";
 
+// This function sets a heart badge randomly on a user profile photo.
+// Later, the heart badge will be set according to the user data fetched from the database and set in the global state.
+function getRandomBooleanForSetHeartBadge() {
+  return Math.random() >= 0.5;
+}
 export default function Post({ post }: any) {
   const [showModal, setShowModal] = useState(false);
-
-  // This function sets a heart badge randomly on a user profile photo.
-  // Later, the heart badge will be set according to the user data fetched from the database and set in the global state.
-  function getRandomBooleanForSetHeartBadge() {
-    return Math.random() >= 0.5;
-  }
 
   return (
     <>
