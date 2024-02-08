@@ -3,12 +3,14 @@ import { View, Text, Image, Pressable } from "react-native";
 import TagList from "./TagsList";
 import HeartBadge from "../HeartBadge/HeartBadge";
 import CustomModal from "../CustomModal/CustomModal";
-import ThreeDotsIcon from "../../../assets/svgComponents/postModalSvgComponents/ThreeDotsIcon";
-import HeartPlusIcon from "../../../assets/svgComponents/postModalSvgComponents/HeartPlusIcon";
-import PaperFlyIcon from "../../../assets/svgComponents/postModalSvgComponents/PaperFlyIcon";
-import UserProfileIcon from "../../../assets/svgComponents/postModalSvgComponents/UserProfileIcon";
-import MailIcon from "../../../assets/svgComponents/postModalSvgComponents/MailIcon";
-import AttentionIcon from "../../../assets/svgComponents/postModalSvgComponents/AttentionIcon";
+import {
+  ThreeDotsIcon,
+  HeartPlusIcon,
+  PaperFlyIcon,
+  UserProfileIcon,
+  MailIcon,
+  AttentionIcon,
+} from "../../../assets/svgComponents/postModalSvgComponents";
 
 import styles from "./Post.style";
 import Colors from "../../../constants/Colors";
