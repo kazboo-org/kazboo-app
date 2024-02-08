@@ -24,11 +24,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 10,
   },
-  loginText: { fontSize: 18, fontWeight: "800" },
-  personalInfoText: { fontSize: 18, fontWeight: "500" },
+  login: { fontSize: 18, fontWeight: "800" },
+  personalInfo: { fontSize: 18, fontWeight: "500" },
   profileDescription: {
     marginHorizontal: 44,
     shadowOpacity: 0.2,
+    fontWeight: "400",
   },
 });
 

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../../constants/Colors";
 
 const styles = StyleSheet.create({
   filtersContainer: {
@@ -7,6 +8,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     gap: 3,
   },
+  filterIconContainer: { position: "absolute", bottom: 20 },
   filterContainer: {
     width: 120,
     height: 48,
@@ -19,10 +21,21 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.23,
     shadowRadius: 1.62,
 
-    elevation: 7,
+    elevation: 2,
+  },
+  pressedFilterContainer: {
+    shadowOpacity: 0.6,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 3.62,
+    elevation: 2,
+  },
+  isActive: {
+    shadowOpacity: 0.6,
   },
 });
 export default styles;

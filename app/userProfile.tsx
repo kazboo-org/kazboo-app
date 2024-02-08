@@ -40,8 +40,8 @@ export default function UserProfile() {
         </View>
       </View>
       <View style={styles.bioSection}>
-        <Text style={styles.loginText}>{data.login}</Text>
-        <Text style={styles.personalInfoText}>
+        <Text style={styles.login}>{data.login}</Text>
+        <Text style={styles.personalInfo}>
           {data.age} år. {data.region}. {data.country}
         </Text>
         <Text style={styles.profileDescription}>{data.aboutProfile}</Text>
