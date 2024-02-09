@@ -1,7 +1,8 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Feather } from "@expo/vector-icons";
 import { Link, Tabs } from "expo-router";
 import { Pressable, useColorScheme, Image, View } from "react-native";
+// import UserProfileScreenIcon from "../../assets/svgComponents/headerIcons/UserProfileScreenIcon";
+// import NotificationsIcon from "../../assets/svgComponents/headerIcons/NotificationsIcon";
 
 import Colors from "../../constants/Colors";
 
@@ -25,12 +26,13 @@ export default function TabLayout() {
           backgroundColor: Colors[colorScheme ?? "light"].headerBackground,
         },
         headerLeft: () => (
-          <Link href="/menu" asChild>
+          <Link href="/userProfile" asChild>
             <Pressable>
               {({ pressed }) => (
-                <Feather
-                  name="menu"
-                  size={25}
+                // <UserProfileScreenIcon fill={""} width={35} height={40} />
+                <FontAwesome
+                  name="user"
+                  size={28}
                   color={Colors[colorScheme ?? "light"].text}
                   style={{ marginLeft: 20, opacity: pressed ? 0.5 : 1 }}
                 />
@@ -50,6 +52,7 @@ export default function TabLayout() {
           <Link href="/notifications" asChild>
             <Pressable>
               {({ pressed }) => (
+                // <NotificationsIcon fill={""} width={33} height={37} />
                 <FontAwesome
                   name="bell"
                   size={25}
