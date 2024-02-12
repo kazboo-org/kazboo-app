@@ -9,7 +9,7 @@ import styles from "./Button.style";
 type RelativePathString = `/${string}`;
 
 interface ButtonProps {
-  iconName: React.ComponentProps<typeof FontAwesome>["name"];
+  iconName?: React.ComponentProps<typeof FontAwesome>["name"];
   buttonText: string;
   path: RelativePathString;
 }
@@ -24,14 +24,16 @@ export default function Button({ iconName, buttonText, path }: ButtonProps) {
           {({ pressed }) => (
             // <UserProfileScreenIcon fill={""} width={35} height={40} />
             <View style={[styles.button, pressed && styles.pressed]}>
-              <FontAwesome
-                name={iconName}
-                size={25}
-                color={Colors[colorScheme ?? "light"].text}
-                style={{
-                  opacity: pressed ? 0.5 : 1,
-                }}
-              />
+              {iconName && (
+                <FontAwesome
+                  name={iconName}
+                  size={25}
+                  color={Colors[colorScheme ?? "light"].text}
+                  style={{
+                    opacity: pressed ? 0.5 : 1,
+                  }}
+                />
+              )}
               <Text style={{ opacity: pressed ? 0.5 : 1 }}>{buttonText}</Text>
             </View>
           )}
