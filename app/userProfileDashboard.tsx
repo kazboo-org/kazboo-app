@@ -14,7 +14,7 @@ export default function UserProfileDashboard() {
       <View style={styles.screenDescriptionContainer}>
         <Text style={styles.screenTitle}>Dine indstillinger</Text>
         <Text style={styles.screenDescription}> {screenDescription}</Text>
-        <SpeechButton speech={screenDescription} />
+        <SpeechButton speechText={screenDescription} />
       </View>
     </View>
   );

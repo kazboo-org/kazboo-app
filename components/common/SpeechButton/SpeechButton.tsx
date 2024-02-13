@@ -6,13 +6,17 @@ import * as Speech from "expo-speech";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import styles from "./SpeechButton.style";
 
-export default function SpeechButton(speech: string) {
+const SpeechOptions = { language: "da", rate: 0.7 };
+
+interface SpeechButtonProps {
+  speechText: string;
+}
+
+export default function SpeechButton({ speechText }: SpeechButtonProps) {
   const colorScheme = useColorScheme();
 
   const speak = () => {
-    const thingToSay =
-      "Her kan du ændre på hvordan din profil ser ud, hvordan du vil have notifikationer og få hjælp";
-    Speech.speak(speech);
+    Speech.speak(speechText, SpeechOptions);
     const voices = Speech.getAvailableVoicesAsync();
     console.log(voices);
   };
