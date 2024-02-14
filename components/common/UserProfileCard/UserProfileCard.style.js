@@ -1,9 +1,14 @@
 import { StyleSheet } from "react-native";
+// import {
+//   horizontalScale,
+//   moderateScale,
+//   verticalScale,
+// } from "../constants/Metrics";
 import {
   horizontalScale,
   moderateScale,
   verticalScale,
-} from "../constants/Metrics";
+} from "../../../constants/Metrics";
 
 const styles = StyleSheet.create({
   cardContainer: {

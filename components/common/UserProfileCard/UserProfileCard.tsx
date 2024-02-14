@@ -6,7 +6,11 @@ import styles from "./UserProfileCard.style";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import Colors from "../../../constants/Colors";
 
-export default function UserProfileCard() {
+interface UserProfileCardProps {
+  imageURL: string;
+}
+
+export default function UserProfileCard({ imageURL }: UserProfileCardProps) {
   const colorScheme = useColorScheme();
 
   return (
@@ -14,7 +18,7 @@ export default function UserProfileCard() {
       <Link href="/home">
         <View style={styles.cardContent}>
           <Image
-            source={require("../../../assets/images/user-profile/havebilledde-2.jpg")}
+            source={require(imageURL)}
             style={{ width: 157, height: 157 }}
           />
           <FontAwesome

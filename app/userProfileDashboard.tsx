@@ -14,6 +14,7 @@ import { Link } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import Colors from "../constants/Colors";
 import UserProfileCard from "../components/common/UserProfileCard/UserProfileCard";
+import images from "../assets/images/user-profile";
 
 const screenDescription =
   "Her kan du ændre på hvordan din profil ser ud, hvordan du vil have notifikationer og få hjælp.";
@@ -30,28 +31,12 @@ export default function UserProfileDashboard() {
         <SpeechButton speechText={screenDescription} />
       </View>
       <View style={styles.cardsContainer}>
-        {/* <UserProfileCard /> */}
-        {/* <View style={styles.cardContainer}>
-          <Link href="/home">
-            <View style={styles.cardContent}>
-              <Image
-                source={require("../assets/images/user-profile/havebilledde-2.jpg")}
-                style={{ width: 157, height: 157 }}
-              />
-              <FontAwesome
-                name="heart"
-                size={40}
-                color={Colors[colorScheme ?? "light"].text}
-              />
-              <Text style={styles.cardTitle}>Kærester</Text>
-            </View>
-          </Link>
-        </View> */}
+        {/* <UserProfileCard imageURL={images.heart} /> */}
         <View style={styles.cardContainer}>
           <Link href="/notifications">
             <View style={styles.cardContent}>
               <Image
-                source={require("../assets/images/user-profile/havebilledde-2.jpg")}
+                source={images.heart}
                 style={{ width: 157, height: 157 }}
               />
               <FontAwesome
@@ -67,15 +52,15 @@ export default function UserProfileDashboard() {
           <Link href="/notifications">
             <View style={styles.cardContent}>
               <Image
-                source={require("../assets/images/user-profile/havebilledde-2.jpg")}
+                source={images.superUsers}
                 style={{ width: 157, height: 157 }}
               />
               <FontAwesome
-                name="heart"
+                name="star"
                 size={40}
                 color={Colors[colorScheme ?? "light"].text}
               />
-              <Text style={styles.cardTitle}>Kærester</Text>
+              <Text style={styles.cardTitle}>Super brugere</Text>
             </View>
           </Link>
         </View>
@@ -83,15 +68,31 @@ export default function UserProfileDashboard() {
           <Link href="/notifications">
             <View style={styles.cardContent}>
               <Image
-                source={require("../assets/images/user-profile/havebilledde-2.jpg")}
+                source={images.groups}
                 style={{ width: 157, height: 157 }}
               />
               <FontAwesome
-                name="heart"
+                name="group"
                 size={40}
                 color={Colors[colorScheme ?? "light"].text}
               />
-              <Text style={styles.cardTitle}>Kærester</Text>
+              <Text style={styles.cardTitle}>Grupper</Text>
+            </View>
+          </Link>
+        </View>
+        <View style={styles.cardContainer}>
+          <Link href="/notifications">
+            <View style={styles.cardContent}>
+              <Image
+                source={images.guardian}
+                style={{ width: 157, height: 157 }}
+              />
+              <FontAwesome
+                name="shield"
+                size={40}
+                color={Colors[colorScheme ?? "light"].text}
+              />
+              <Text style={styles.cardTitle}>Værge</Text>
             </View>
           </Link>
         </View>
