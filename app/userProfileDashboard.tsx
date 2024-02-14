@@ -13,6 +13,7 @@ import SpeechButton from "../components/common/SpeechButton/SpeechButton";
 import { Link } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import Colors from "../constants/Colors";
+import UserProfileCard from "../components/common/UserProfileCard/UserProfileCard";
 
 const screenDescription =
   "Her kan du ændre på hvordan din profil ser ud, hvordan du vil have notifikationer og få hjælp.";
@@ -29,7 +30,8 @@ export default function UserProfileDashboard() {
         <SpeechButton speechText={screenDescription} />
       </View>
       <View style={styles.cardsContainer}>
-        <View style={styles.cardContainer}>
+        {/* <UserProfileCard /> */}
+        {/* <View style={styles.cardContainer}>
           <Link href="/home">
             <View style={styles.cardContent}>
               <Image
@@ -44,7 +46,7 @@ export default function UserProfileDashboard() {
               <Text style={styles.cardTitle}>Kærester</Text>
             </View>
           </Link>
-        </View>
+        </View> */}
         <View style={styles.cardContainer}>
           <Link href="/notifications">
             <View style={styles.cardContent}>
