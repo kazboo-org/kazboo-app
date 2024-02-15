@@ -10,7 +10,7 @@ import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import HeartBadge from "../components/common/HeartBadge/HeartBadge";
 import Sizes from "../constants/Sizes";
-import styles from "./userProfilePage.style";
+import styles from "./userProfile.style";
 import data from "../data.json";
 import Filter from "../components/common/Filter/Filter";
 import Button from "../components/common/Button/Button";
