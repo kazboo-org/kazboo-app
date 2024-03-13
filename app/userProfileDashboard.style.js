@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
   screen: {
     paddingVertical: verticalScale(30),
     paddingHorizontal: "2%",
-    backgroundColor: "rgba(0,0,0,0.05)",
   },
   screenDescriptionContainer: {
     marginHorizontal: horizontalScale(20),
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: horizontalScale(8),
     margin: "2%",
     paddingBottom: horizontalScale(10),
-    width: "46%",
+    width: "45%",
     backgroundColor: "white",
   },
   cardContent: { alignItems: "center" },
