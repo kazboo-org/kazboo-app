@@ -55,7 +55,11 @@ export default function UserProfile() {
         </Text>
         <Text style={styles.profileDescription}>{data.aboutProfile}</Text>
       </View>
-      <Button buttonText="Ret i din profil" iconName="gear" path="/dashboard" />
+      <Button
+        buttonText="Ret i din profil"
+        iconName="gear"
+        path="/userProfileDashboard"
+      />
       <Filter />
     </ScrollView>
   );

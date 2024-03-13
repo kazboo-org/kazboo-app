@@ -75,7 +75,29 @@ function RootLayoutNav() {
           name="userProfile"
           options={{
             // headerShown: false,
-            title: "User Profile Overview",
+            title: "",
+          }}
+        />
+        <Stack.Screen
+          name="userProfileDashboard"
+          options={{
+            // headerShown: false,
+            title: "",
+            headerRight: () => (
+              <Link href="/notifications" asChild>
+                <Pressable>
+                  {({ pressed }) => (
+                    // <NotificationsIcon fill={""} width={33} height={37} />
+                    <FontAwesome
+                      name="bell"
+                      size={25}
+                      color={Colors[colorScheme ?? "light"].text}
+                      style={{ marginRight: 20, opacity: pressed ? 0.5 : 1 }}
+                    />
+                  )}
+                </Pressable>
+              </Link>
+            ),
           }}
         />
         {/* <Stack.Screen

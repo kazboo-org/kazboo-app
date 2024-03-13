@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   },
   bioSection: {
     marginTop: Sizes.userProfileImage / 1.2,
+    marginBottom: 20,
     alignItems: "center",
     gap: 10,
   },
