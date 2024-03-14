@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     marginLeft: 20,
-    marginLefttextAlign: "center",
+    textAlign: "center",
     fontWeight: "bold",
     fontSize: 20,
   },

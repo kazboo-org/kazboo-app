@@ -33,7 +33,10 @@
     "react-native-web": "~0.19.6",
     "expo-blur": "~12.4.1",
     "react-native-svg": "13.9.0",
-    "expo-speech": "~11.3.0"
+    "expo-speech": "~11.3.0",
+    "expo-notifications": "~0.20.1",
+    "expo-device": "~5.4.0",
+    "expo-constants": "~14.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
